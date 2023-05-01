@@ -10,13 +10,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
-end)
-
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
@@ -56,5 +49,8 @@ vim.keymap.set("i", "{", "{}<left>")
 vim.keymap.set("i", "{<CR>", "{<CR>}<ESC>O")
 vim.keymap.set("i", "{;<CR>", "{<CR>};<ESC>O")
 
-vim.keymap.set("n", 'y', '"+y')
+vim.keymap.set("n", 'yy', 'V"+y')
+vim.keymap.set("n", 'dd', 'v$"+ydd')
+vim.keymap.set("v", 'd', '"+yd')
+vim.keymap.set("v", 'y', '"+y')
 vim.keymap.set("n", 'p', '"+p')
