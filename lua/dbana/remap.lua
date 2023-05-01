@@ -50,7 +50,7 @@ vim.keymap.set("i", "{<CR>", "{<CR>}<ESC>O")
 vim.keymap.set("i", "{;<CR>", "{<CR>};<ESC>O")
 
 vim.keymap.set("n", 'yy', 'V"+y')
-vim.keymap.set("n", 'dd', 'v$"+ydd')
+vim.keymap.set("n", 'dd', 'V"+ydd')
 vim.keymap.set("v", 'd', '"+yd')
 vim.keymap.set("v", 'y', '"+y')
 vim.keymap.set("n", 'p', '"+p')
