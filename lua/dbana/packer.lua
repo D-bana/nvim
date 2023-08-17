@@ -3,6 +3,7 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
+local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -20,15 +21,17 @@ use({
 	  end
 })
 
+
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
 use('theprimeagen/harpoon')
 use('mbbill/undotree')
 use('tpope/vim-fugitive')
+use('github/copilot.vim')
 
 use {
   'VonHeikemen/lsp-zero.nvim',
-  branch = 'v2.x',
+  branch = 'v2.x'0,
   requires = {
     -- LSP Support
     {'neovim/nvim-lspconfig'},             -- Required
